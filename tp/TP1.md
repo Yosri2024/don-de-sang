@@ -1,37 +1,44 @@
 **TP1 — Cadrage du projet : Centre de don de sang (éligibilité des donneurs)**  
-Équipe : Yosri Dkhil, Amine Aslouj , Oumayma Baghoudi , Mohamed Nejib Chabbouh  
-**1. Vision**  
-**Q1 — Problème métier**  
-Le centre ne dispose pas d'un moyen fiable de faire respecter la fréquence des dons, d'absorber l'affluence de la salle de prélèvement et de faire venir rapidement les donneurs d'un groupe sanguin qui manque, alors que ses réserves manquent souvent.  
-**Phrase qui décrit une solution :** « Le centre veut une application pour ses donneurs de sang. »  
-**Q2 — Parties prenantes**  
+   
+ Équipe : Yosri Dkhil, Amine Aslouj , Oumayma Baghoudi , Mohamed Nejib Chabbouh  
+   
+ **1. Vision**  
+   
+ **Q1 — Problème métier**  
+   
+ Le centre ne dispose pas d'un moyen fiable de faire respecter la fréquence des dons, d'absorber l'affluence de la salle de prélèvement et de faire venir rapidement les donneurs d'un groupe sanguin qui manque, alors que ses réserves manquent souvent.  
+   
+ **Phrase qui décrit une solution :** « Le centre veut une application pour ses donneurs de sang. »  
+   
+ **Q2 — Parties prenantes**  
   
 |  |  |  |  
 | - | - | - |  
+|   |    |    |  
 | **Partie prenante** |  **Statut** |  **Attente** |  
 | Donneur |  Explicite |  Prendre rendez-vous pour un don |  
 | Infirmier |  Explicite |  Vérifier si un donneur peut donner |  
 | Médecin |  Explicite |  Gérer les dossiers des donneurs ; au moins 3 mois entre deux dons |  
 | Responsable des collectes |  Explicite |  Suivre les collectes ; accepter un donneur toutes les 8 semaines |  
 | Centre de transfusion (commanditaire) |  Explicite |  Une application ; protéger les donneurs ; données protégées |  
-| Personnel qui tient le téléphone et le cahier |  Potentielle |  Concerné par le changement de pratique |  
-| Direction du centre |  Potentielle |  Arbitrer entre 3 mois et 8 semaines |  
 | Service informatique ou prestataire |  Potentielle |  Exploitation, maintenance |  
-| Responsable de la protection des données |  Potentielle |  Protection des données |  
-| Receveurs et établissements de santé |  Potentielle |  Impactés par l'état des réserves |  
   
    
-**Q3 — Objectifs**  
+   
+   
+ **Q3 — Objectifs**  
 - **OBJ-01** — Réduire le nombre de dons acceptés en dehors de la fréquence autorisée de \[valeur actuelle à mesurer\] à \[valeur cible à valider\] d'ici \[délai à valider\].  
 - **OBJ-02** — Réduire le nombre de matinées où la salle de prélèvement déborde de \[valeur actuelle à mesurer\] à \[valeur cible à valider\] d'ici \[délai à valider\].  
-Les valeurs `[à valider]` font l'objet de questions dédiées dans `docs/questions-client.md` (section « Valeurs des objectifs »).  
-**Q4 — Objectif le plus difficile à mesurer**  
-**Protéger la santé des donneurs.** Difficile à mesurer parce que la « santé » est une notion large et subjective : le client n'a donné ni indicateur, ni valeur, ni règle de fréquence précise (3 mois ou 8 semaines, maximum annuel absent). Indicateurs possibles à proposer au client : proportion de dons conformes à la règle de fréquence retenue ; nombre de dons acceptés malgré un non-respect de cette règle ; nombre de refus d'éligibilité posés par l'infirmier. Aucune valeur cible sans confirmation du client.  
-**2. Périmètre**  
-**Q5 — Tableau connu / inconnu**  
+   
+ Les valeurs `[à valider]` font l'objet de questions dédiées dans `questions-client.md` (section « Valeurs des objectifs »).  
+ **Q4 — Objectif le plus difficile à mesurer**  
+ **Protéger la santé des donneurs.** Difficile à mesurer parce que la « santé » est une notion large et subjective : le client n'a donné ni indicateur, ni valeur, ni règle de fréquence précise (3 mois ou 8 semaines, maximum annuel absent). Indicateurs possibles à proposer au client : proportion de dons conformes à la règle de fréquence retenue ; nombre de dons acceptés malgré un non-respect de cette règle ; nombre de refus d'éligibilité posés par l'infirmier. Aucune valeur cible sans confirmation du client.  
+ **2. Périmètre**  
+ **Q5 — Tableau connu / inconnu**  
   
 |  |  |  |  
 | - | - | - |  
+|   |    |    |  
 | **Élément** |  **Catégorie** |  **Source (phrase de la demande) ou « à valider »** |  
 | Prendre rendez-vous pour un don |  Dans le périmètre |  « Les donneurs doivent pouvoir prendre rendez-vous pour un don » |  
 | Vérifier si un donneur peut donner |  Dans le périmètre, à préciser |  « l'infirmier doit vérifier si un donneur peut donner » ; critères non fournis |  
@@ -58,13 +65,19 @@ Les valeurs `[à valider]` font l'objet de questions dédiées dans `docs/questi
 | **Point ouvert lié :** comment le centre constate-t-il qu'un groupe manque ? |  Point ouvert |  à valider |  
   
    
-**Q6 — Élément hors périmètre**  
-Gestion des réserves de sang : classée en **point ouvert**, non exclue. La demande ne demande pas de les gérer mais ne l'exclut pas non plus ; l'exclure serait une décision du client.  
-**3. Exigences**  
-**Q7 — Tableau des exigences**  
+   
+   
+ **Q6 — Élément hors périmètre**  
+   
+ Gestion des réserves de sang : classée en **point ouvert**, non exclue. La demande ne demande pas de les gérer mais ne l'exclut pas non plus ; l'exclure serait une décision du client.  
+   
+ **3. Exigences**  
+   
+ **Q7 — Tableau des exigences**  
   
 |  |  |  |  |  
 | - | - | - | - |  
+|   |    |    |    |  
 | **ID** |  **Exigence** |  **Type** |  **Source** |  
 | REQ-F-01 |  Le système doit permettre à un donneur de prendre rendez-vous pour un don. |  F |  « Les donneurs doivent pouvoir prendre rendez-vous pour un don » |  
 | REQ-F-02 |  Le système doit permettre à un infirmier de vérifier si un donneur peut donner. |  F |  « l'infirmier doit vérifier si un donneur peut donner » |  
@@ -74,22 +87,29 @@ Gestion des réserves de sang : classée en **point ouvert**, non exclue. La dem
 | REQ-NF-01 |  Le système doit protéger les données. |  NF |  « Les données doivent être protégées. » |  
   
    
-Note : « fréquence autorisée » (REQ-F-05) et « gérer » (REQ-F-03) sont à préciser avec le client. Le besoin « groupe sanguin manquant » est dans le périmètre mais n'a pas d'exigence tant que « très vite » et le moyen de joindre les donneurs ne sont pas définis (voir Q8).  
-**Q8 — Critique d'exigences**  
-**Exigences du TP :**  
+   
+   
+ Note : « fréquence autorisée » (REQ-F-05) et « gérer » (REQ-F-03) sont à préciser avec le client. Le besoin « groupe sanguin manquant » est dans le périmètre mais n'a pas d'exigence tant que « très vite » et le moyen de joindre les donneurs ne sont pas définis (voir Q8).  
+   
+ **Q8 — Critique d'exigences**  
+   
+ **Exigences du TP :**  
 - **REQ-F-06** « Le système doit permettre à l'administration de gérer les salles. » Problème : « gérer » est ambigu (ajouter, modifier, supprimer, rendre indisponible ?). Question au client : quelles opérations la gestion comprend-elle ? (Transposé ici : REQ-F-03.)  
 - **REQ-NF-02** « …accessible depuis un ordinateur et un smartphone. » Problème : la demande dit « ordinateur **ou** téléphone », et « smartphone » est un mot ajouté. Version corrigée : « …depuis un ordinateur ou un téléphone », ou question au client.  
-**Exemples sur notre sujet :**  
+ **Exemples sur notre sujet :**  
 - « Le système doit refuser tout rendez-vous d'un donneur dont le dernier don date de moins de 3 mois. » Problème : retient la position des médecins et ignore celle du responsable des collectes. Question : quel intervalle retenez-vous, 3 mois ou 8 semaines, et qui tranche ?  
 - « Le système doit permettre aux donneurs d'un groupe manquant de venir très vite. » Problème : « très vite » non vérifiable. Questions : quel délai, comment le manque est-il constaté, comment les donneurs sont-ils joints ?  
-**Q9 — « Les données doivent être protégées »**  
-Non vérifiable en l'état. Questions au client : quelles données, contre quelles menaces, qui accède à quoi, quelles règles s'appliquent et qui les confirme, quelle durée de conservation, comment vérifier que la protection est suffisante.  
-**4. Analyse IA**  
-Prompt utilisé : « Analyse cette demande client pour un système de don de sang. Identifie les ambiguïtés, les informations manquantes et les questions qui devraient être posées au client. N'invente pas de nouvelles exigences. » La sortie ci-dessous a été produite par un assistant IA (Claude) à partir de la demande du sujet 17 ; la classification est la décision humaine.  
-**Q10 — Tableau de classement**  
+ **Q9 — « Les données doivent être protégées »**  
+   
+ Non vérifiable en l'état. Questions au client : quelles données, contre quelles menaces, qui accède à quoi, quelles règles s'appliquent et qui les confirme, quelle durée de conservation, comment vérifier que la protection est suffisante.  
+ **4. Analyse IA**  
+   
+ Prompt utilisé : « Analyse cette demande client pour un système de don de sang. Identifie les ambiguïtés, les informations manquantes et les questions qui devraient être posées au client. N'invente pas de nouvelles exigences. » La sortie ci-dessous a été produite par un assistant IA (Claude) à partir de la demande du sujet 17 ; la classification est la décision humaine.  
+ **Q10 — Tableau de classement**  
   
 |  |  |  |  
 | - | - | - |  
+|   |    |    |  
 | **Proposition IA** |  **Décision** |  **Justification** |  
 | 1. Trancher 3 mois / 8 semaines |  Acceptée |  Contradiction explicite dans la demande |  
 | 2. Préciser le maximum annuel de dons |  Acceptée |  « dans l'année » sans valeur |  
@@ -106,14 +126,21 @@ Prompt utilisé : « Analyse cette demande client pour un système de don de san
 | 13. Double authentification et chiffrement |  Rejetée |  Choix techniques prématurés |  
   
    
-**Q11 — Proposition plausible mais inventée**  
-**Proposition 10, le questionnaire de santé en ligne.** Convaincante : elle répond à la protection des donneurs, soulage l'infirmier et semble professionnelle. Dangereuse si acceptée sans vérification : la demande ne dit ni quelles informations recueillir ni qui décide. Elle élargit le périmètre (nouveau parcours, nouvelles données de santé), exige une validation médicale, déplace la décision de l'infirmier vers le système et rend les tests impossibles sans règles validées.  
-**Q12 — Ambiguïté relevée par l'IA que nous n'avions pas identifiée**  
-« Dans l'année » : année civile ou 12 derniers mois ? Nous avions relevé l'absence de valeur du maximum annuel et la contradiction 3 mois / 8 semaines, mais pas la façon de compter l'année. Une règle sans période claire donne des résultats différents pour un même donneur et n'est pas testable. *(À confirmer par l'équipe : n'écrivez cette réponse que si elle correspond à ce que vous aviez réellement identifié.)*  
-**Traçabilité**  
+   
+   
+ **Q11 — Proposition plausible mais inventée**  
+   
+ **Proposition 10, le questionnaire de santé en ligne.** Convaincante : elle répond à la protection des donneurs, soulage l'infirmier et semble professionnelle. Dangereuse si acceptée sans vérification : la demande ne dit ni quelles informations recueillir ni qui décide. Elle élargit le périmètre (nouveau parcours, nouvelles données de santé), exige une validation médicale, déplace la décision de l'infirmier vers le système et rend les tests impossibles sans règles validées.  
+   
+ **Q12 — Ambiguïté relevée par l'IA que nous n'avions pas identifiée**  
+   
+ « Dans l'année » : année civile ou 12 derniers mois ? Nous avions relevé l'absence de valeur du maximum annuel et la contradiction 3 mois / 8 semaines, mais pas la façon de compter l'année. Une règle sans période claire donne des résultats différents pour un même donneur et n'est pas testable. *(À confirmer par l'équipe : n'écrivez cette réponse que si elle correspond à ce que vous aviez réellement identifié.)*  
+   
+ **Traçabilité**  
   
 |  |  |  |  |  
 | - | - | - | - |  
+|   |    |    |    |  
 | **Besoin métier** |  **Objectif** |  **Exigence initiale** |  **Source dans la demande** |  
 | Protéger la santé des donneurs |  OBJ-01 |  REQ-F-05 |  « ne doivent pas donner trop souvent dans l'année » |  
 | S'assurer qu'un donneur peut donner |  OBJ-01 (lien à valider) |  REQ-F-02 |  « l'infirmier doit vérifier si un donneur peut donner » |  
@@ -122,5 +149,6 @@ Prompt utilisé : « Analyse cette demande client pour un système de don de san
 | Protéger les données |  Aucun objectif défini (à valider) |  REQ-NF-01 |  « Les données doivent être protégées. » |  
   
    
-**Questions pour le client**  
-Voir `docs/questions-client.md` (45 questions, une idée par question).  
+   
+   
+   
