@@ -13,10 +13,10 @@ Projet **Sujet 17** : application pour un centre de transfusion sanguine permett
 
 | Chemin | Description |
 | --- | --- |
-| `tp/TP1.docx` | TP1 — Cadrage du projet : vision, parties prenantes, objectifs, périmètre, premières exigences et analyse critique assistée par IA |
+| `tp/TP1.docx` | TP1 : vision, parties prenantes, objectifs, périmètre, premières exigences et analyse critique assistée par IA |
 | `docs/stories/` | User stories (à venir) |
 
-## TP1 — Cadrage
+## TP1
 
 Le document `tp/TP1.docx` couvre :
 
